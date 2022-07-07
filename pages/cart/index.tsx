@@ -14,6 +14,7 @@ export default function Cart () {
     const [value, setValue] = useState()
 
     useEffect(() => {
+        
         const url = process.env.URL || 'http://localhost:3000'
         fetch(`${url}/api/cart`)
         .then(res => res.json())
