@@ -1,4 +1,4 @@
-import { _Container, _Heading, _Card } from '../../styled/global';
+import { _Container, _Heading, _Card } from '../../../styled/global';
 
 export default function ProductCart() {
     return (

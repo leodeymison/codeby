@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const _Cart = styled('div')`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-`
-
 export const _body = styled('div')`
     overflow-y: auto;
     overflow-x: hidden;
