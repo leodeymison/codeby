@@ -11,11 +11,15 @@ import { useEffect, useState } from "react";
 
 export default function Cart () {
     const [carts, setCarts] = useState()
+    const [value, setValue] = useState()
+
     useEffect(() => {
         fetch("http://localhost:3000/api/cart")
         .then(res => res.json())
         .then(data => {
             setCarts(data.items)
+            // setValue(0)
+            setValue(data.value)
         })
         .catch(error => {
           console.log(error)
@@ -25,7 +29,7 @@ export default function Cart () {
         <_Cart>
             <NavBarProduct text="Carrinho" />
             <CartBody products={carts} />
-            <FinalizeRequest />
+            <FinalizeRequest value={value} />
         </_Cart>
     )
 }

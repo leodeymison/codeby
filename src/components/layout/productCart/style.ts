@@ -10,3 +10,8 @@ export const _Img = styled('img')`
     width: 100px;
     height: 100px;
 `
+
+export const _Span = styled('span')`
+    text-decoration: line-through;
+    font-weight: 100;
+`

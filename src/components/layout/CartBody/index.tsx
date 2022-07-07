@@ -14,13 +14,14 @@ export default function CartBody(data: ProductsCart) {
         <_body>
             {
                 data.products?.map((product) => 
-                        <ProductCart 
-                            id={product.id}
-                            key={product.id}
-                            name={product.name}
-                            price={product.price}
-                            sellingPrice={product.sellingPrice}
-                            imageUrl={product.imageUrl} 
+                    <ProductCart 
+                        id={product.id}
+                        key={product.id}
+                        name={product.name}
+                        price={product.price}
+                        sellingPrice={product.sellingPrice}
+                        imageUrl={product.imageUrl} 
+                        quantity={product.quantity}
                     />
                 )
             }
