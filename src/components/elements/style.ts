@@ -14,3 +14,30 @@ export const _ButtonFunc = styled('button')`
     font-size: 18px;
     cursor: pointer;
 `
+
+export const _Message = styled('div')`
+    background-color: #00ff005c;
+    text-align: center;
+    border-radius: 20px;
+    padding: .5em 1em;
+`
+
+
+type QuantType = {
+    BColor?: string,
+    color?: string
+}
+export const _Quant = styled('button')<QuantType>`
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${props => props.BColor || '#fff'};
+    color: ${props => props.color || 'black'};
+    border: none;
+`
+
+export const _QuantBox = styled('div')`
+    display: flex;
+`

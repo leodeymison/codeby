@@ -1,19 +1,36 @@
-import { _Container, _Heading, _Card } from '../../../styled/global';
+import { _Container, _Heading } from '../../../styled/global';
+import { _Card, _Img, _Span } from './style'
 
-export default function ProductCart() {
+// interfaces
+import { ProductInterface } from '../../../interfaces/product';
+import Quantaty from '../../elements/Quantaty';
+import { useState } from 'react';
+ 
+export default function ProductCart(data:ProductInterface) {
+    const { name, sellingPrice, price, imageUrl, quantity } = data
+    const [value, setValue] = useState(quantity)
+    const remove = () => {return }
+    const add = () => {return setValue(value+1)}
+    const back = () => {
+        if(value > 1){
+            return setValue(value-1)}
+        }
     return (
         <_Container dplay='flex' pd={1}>
             <_Card>
-                <img
-                    height="100px"
-                    width="100px"
-                    src="https://thumbs.dreamstime.com/b/%C3%ADcone-da-bala-no-estilo-liso-isolado-fundo-branco-desenhos-animados-muni%C3%A7%C3%A3o-arma-do-cartucho-vetor-113307792.jpg" 
-                    alt="Produto" />
+                <_Img
+                    src={imageUrl} 
+                    alt={name} />
             </_Card>
-            <_Container pd={0.3}>
-                <_Heading level={3}>Trufa de morango</_Heading>
-                <span>R$1,23</span>
-                <p>R$1,11</p>
+            <_Container pd={0.5}>
+                <_Heading level={3}>{name}</_Heading>
+                <br />
+                <_Heading level={3}>
+                    <_Span>R$ {sellingPrice}</_Span> - 
+                    R$ {price}
+                </_Heading>
+                <br />
+                <Quantaty value={value} add={add} back={back} />
             </_Container>
         </_Container>
     )
