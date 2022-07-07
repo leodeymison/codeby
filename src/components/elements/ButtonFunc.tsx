@@ -1,5 +1,5 @@
 // interfaces
-import { ButtonFuncInterface } from '../../interfaces/buttonFunc';
+import { ButtonFuncInterface } from '../../interfaces/ButtonFunc';
 
 // Styled
 import { _ButtonFunc } from './style';

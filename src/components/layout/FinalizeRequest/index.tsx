@@ -1,9 +1,9 @@
 // styleds
 import { _FinalizeRequest, _Valores } from './style';
-import { _Container, _Heading } from '../../styled/global';
+import { _Container, _Heading } from '../../../styled/global';
 
 // Components
-import ButtonFunc from '../elements/ButtonFunc';
+import ButtonFunc from '../../elements/ButtonFunc';
 
 export default function FinalizeRequest() {
     return (
