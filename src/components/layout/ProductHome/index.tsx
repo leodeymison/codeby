@@ -6,13 +6,19 @@ import { ProductInterface } from '../../../interfaces/product';
 
 import ButtonFunc from '../../elements/ButtonFunc';
 import { useState } from 'react';
- 
+
+import { addDBStorage } from '../../../../utils/localstorage'
+
 export default function ProductCart(data:ProductInterface) {
-    const { id, name, sellingPrice, price, imageUrl } = data;
-    const [clickBtn, setClickBtn] = useState(false);
+    var { id, name, sellingPrice, price, imageUrl, add, quantCart, setQuantCart } = data;
+    const [clickBtn, setClickBtn] = useState(add);
 
     function addCart() {
-        console.log('Clicou');
+        const data = {
+            id, name, sellingPrice, price, imageUrl
+        }
+        addDBStorage(data, 'cart')
+        setQuantCart(quantCart += 1)
         return setClickBtn(true)
     }
 

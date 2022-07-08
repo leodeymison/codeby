@@ -8,6 +8,8 @@ import { ProductInterface } from '../../../interfaces/product';
 
 interface ProductsCart {
     products: Array<ProductInterface>,
+    setQuantCart: Function,
+    quantCart: number
 }
 
 export default function CartBody(data: ProductsCart) {
@@ -23,6 +25,9 @@ export default function CartBody(data: ProductsCart) {
                             price={product.price}
                             sellingPrice={product.sellingPrice}
                             imageUrl={product.imageUrl}
+                            add={product.add}
+                            quantCart={data.quantCart}
+                            setQuantCart={data.setQuantCart}
                         />
                     )
                 }

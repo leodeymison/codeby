@@ -22,6 +22,7 @@ export default function CartBody(data: ProductsCart) {
                         sellingPrice={product.sellingPrice}
                         imageUrl={product.imageUrl} 
                         quantity={product.quantity}
+                        add={product.add}
                     />
                 )
             }

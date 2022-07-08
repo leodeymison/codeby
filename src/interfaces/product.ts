@@ -5,4 +5,7 @@ export interface ProductInterface {
     sellingPrice: number,
     imageUrl: string,
     quantity?: number,
+    add: boolean,
+    quantCart?: number,
+    setQuantCart?: Function
 }
