@@ -1,7 +1,7 @@
 // Components
-import ProductCart from "../productCart/index";
+import ProductCart from "../ProductCart/index";
 // styleds
-import { _body } from './style';
+import { _body } from '../../../styled/global';
 // interface
 import { ProductInterface } from '../../../interfaces/product';
 

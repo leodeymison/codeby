@@ -1,3 +1,5 @@
 export interface NarbarProducInterface {
-    text: string
+    text: string,
+    Icon?: any,
+    url: string
 }

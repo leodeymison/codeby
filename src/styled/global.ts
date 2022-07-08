@@ -34,7 +34,7 @@ export const _Main = styled('div')`
     width: 100%;
     height: 100vh;
     justify-content: center;
-    background-color: #eee;
+    background-color: #32c7e3;
     overflow: hidden;
 `
 export const _MainSub = styled('div')`
@@ -46,4 +46,18 @@ export const _MainSub = styled('div')`
 export const _Card = styled('div')`
     display: block;
     border: solid 1px black;
+`
+
+export const _body = styled('div')`
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 5px;
+        background-color: #379ef2;
+        border-radius: 10px;
+    }
 `
