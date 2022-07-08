@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
-export const _ButtonFunc = styled('button')`
+type _ButtonFuncType = {
+    BColor: string
+}
+export const _ButtonFunc = styled('button')<_ButtonFuncType>`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #379ef2;
+    background-color: ${props => props.BColor};
     color: white;
     font-weight: 600;
     width: 100%;
@@ -36,8 +39,23 @@ export const _Quant = styled('button')<QuantType>`
     background-color: ${props => props.BColor || '#fff'};
     color: ${props => props.color || 'black'};
     border: none;
+    cursor: pointer;
 `
 
 export const _QuantBox = styled('div')`
     display: flex;
+`
+
+export const _QuantCart = styled('div')`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: #379ef2;
+    color: white;
+    border-radius: 100%;
+    height: 15px;
+    width: auto;
+    padding: 0 5px;
+    margin: -10px 0 0 -5px;
 `

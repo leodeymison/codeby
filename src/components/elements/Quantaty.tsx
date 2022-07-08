@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { _Quant, _QuantBox } from './style';
 
 interface QuantatyInterface {

@@ -5,9 +5,13 @@ import { ButtonFuncInterface } from '../../interfaces/ButtonFunc';
 import { _ButtonFunc } from './style';
 
 export default function ButtonFunc(data:ButtonFuncInterface){
-    const { text } = data
+    const { text, Cart, BColor } = data
+
+    function CartFunc(){
+        Cart()
+    }
     return (
-        <_ButtonFunc>
+        <_ButtonFunc BColor={BColor} onClick={CartFunc} >
             {text}
         </_ButtonFunc>
     )

@@ -12,3 +12,15 @@ export const _Title = styled('div')`
     padding: 1em;
     width: 100%;
 `
+
+export const _IconBox = styled('a')`
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    cursor: pointer;
+    a {
+        display: block;
+    }
+`
