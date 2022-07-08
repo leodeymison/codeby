@@ -1,6 +1,10 @@
 {
   "name": "codeby",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/leodeymison/codeby.git",
+  "author": "leodeymison <leodeymisonbasquete@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +13,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "mongodb": "^4.7.0",
     "next": "12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -17,7 +20,6 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@types/mongodb": "^4.0.7",
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
     "@types/react-icons": "^3.0.0",
