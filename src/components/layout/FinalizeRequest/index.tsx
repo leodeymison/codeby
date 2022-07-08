@@ -26,6 +26,7 @@ export default function FinalizeRequest(data:Finalizar) {
             }
             <_Container pd={1}  dplay="flex" justifyC='center'>
                 <ButtonFunc 
+                    BColor='#379ef2'
                     text='Finalizar compra'
                  />
             </_Container>

@@ -15,11 +15,10 @@ export default function Cart () {
     const [value, setValue] = useState()
 
     useEffect(() => {
-        fetch(`https://codeby-demo.netlify.app/api/cart`)
+        fetch(`https://codeby-16da8-default-rtdb.firebaseio.com/cart.json`)
         .then(res => res.json())
         .then(data => {
             setCarts(data.items)
-            // setValue(0)
             setValue(data.value)
         })
         .catch(error => {

@@ -7,7 +7,7 @@ import { _ContainerLocal } from './style'
 import { ProductInterface } from '../../../interfaces/product';
 
 interface ProductsCart {
-    products: Array<ProductInterface>
+    products: Array<ProductInterface>,
 }
 
 export default function CartBody(data: ProductsCart) {
@@ -22,7 +22,7 @@ export default function CartBody(data: ProductsCart) {
                             name={product.name}
                             price={product.price}
                             sellingPrice={product.sellingPrice}
-                            imageUrl={product.imageUrl} 
+                            imageUrl={product.imageUrl}
                         />
                     )
                 }

@@ -11,23 +11,31 @@ import { BsCart } from 'react-icons/bs';
 
 export default function Cart () {
     const [carts, setCarts] = useState()
-    const [value, setValue] = useState()
+    const [quantCart, setQuantCart] = useState()
 
     useEffect(() => {
-        fetch(`https://codeby-demo.netlify.app/api/cart`)
+        fetch(`https://codeby-16da8-default-rtdb.firebaseio.com/product.json`)
         .then(res => res.json())
         .then(data => {
-            setCarts(data.items)
-            // setValue(0)
-            setValue(data.value)
+          const newData = data.filter(dt => dt !== null)
+          setCarts(newData)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+        fetch(`https://codeby-16da8-default-rtdb.firebaseio.com/cart.json`)
+        .then(res => res.json())
+        .then(data => {
+            setQuantCart(data.items.length)
         })
         .catch(error => {
           console.log(error)
         })
     }, [])
+
     return (
       <_Box>
-        <NavBarProduct url="/cart" Icon={BsCart} text="Cardápio Up" />
+        <NavBarProduct quant={quantCart} url="/cart" Icon={BsCart} text="Cardápio Up" />
         <HomeBody products={carts} />
       </_Box>
     )

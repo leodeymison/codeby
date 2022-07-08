@@ -4,5 +4,5 @@ export interface ProductInterface {
     price: number,
     sellingPrice: number,
     imageUrl: string,
-    quantity?: number
+    quantity?: number,
 }
