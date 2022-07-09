@@ -18,12 +18,11 @@ export const _Span = styled('span')`
 
 export const _Remove = styled('div')`
     display: flex;
-    width: 100%;
+    width: 8%;
     justify-content: flex-end;
-    padding: 1em;
+    padding: .5em;
     svg {
         cursor: pointer;
-        padding: 10px;
         &:hover{
             background-color: #fa030336;
         }
