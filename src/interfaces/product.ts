@@ -7,5 +7,8 @@ export interface ProductInterface {
     quantity?: number,
     add: boolean,
     quantCart?: number,
-    setQuantCart?: Function
+    setQuantCart?: Function,
+    valueTotal?: number,
+    setValueTotal?: Function,
+    setCarts?: Function
 }

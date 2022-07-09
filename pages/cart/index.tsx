@@ -10,25 +10,27 @@ import _Box from '../../src/styled/box';
 import { useEffect, useState } from "react";
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
+import { getLocalStorage } from '../../utils/localstorage'
+
 export default function Cart () {
     const [carts, setCarts] = useState()
-    const [value, setValue] = useState()
+    const [value, setValue] = useState(0)
 
     useEffect(() => {
-        fetch(`https://codeby-16da8-default-rtdb.firebaseio.com/cart.json`)
-        .then(res => res.json())
-        .then(data => {
-            setCarts(data.items)
-            setValue(data.value)
-        })
-        .catch(error => {
-          console.log(error)
-        })
+        const cartList = getLocalStorage('cart') || []
+        if(cartList.length > 0){
+            setCarts(cartList)
+            var cartValueTotal = 0;
+            cartList.forEach(element => {
+                cartValueTotal += element.sellingPrice * element.quantity
+            });
+            setValue(cartValueTotal)
+        }
     }, [])
     return (
         <_Box>
             <NavBarProduct url="/" Icon={AiOutlineArrowLeft} text="Carrinho" />
-            <CartBody products={carts} />
+            <CartBody products={carts} setCarts={setCarts} valueTotal={value} setValueTotal={setValue} />
             <FinalizeRequest value={value} />
         </_Box>
     )

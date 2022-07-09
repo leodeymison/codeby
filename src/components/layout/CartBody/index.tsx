@@ -6,14 +6,17 @@ import { _body } from '../../../styled/global';
 import { ProductInterface } from '../../../interfaces/product';
 
 interface ProductsCart {
-    products: Array<ProductInterface>
+    products: Array<ProductInterface>,
+    valueTotal: number,
+    setValueTotal: Function,
+    setCarts: Function
 }
 
 export default function CartBody(data: ProductsCart) {
     return (
         <_body>
             {
-                data.products?.map((product) => 
+                data.products && data.products?.map((product) => 
                     <ProductCart 
                         id={product.id}
                         key={product.id}
@@ -23,6 +26,9 @@ export default function CartBody(data: ProductsCart) {
                         imageUrl={product.imageUrl} 
                         quantity={product.quantity}
                         add={product.add}
+                        valueTotal={data.valueTotal}
+                        setValueTotal={data.setValueTotal}
+                        setCarts={data.setCarts}
                     />
                 )
             }

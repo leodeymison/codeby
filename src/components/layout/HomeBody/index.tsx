@@ -28,6 +28,7 @@ export default function CartBody(data: ProductsCart) {
                             add={product.add}
                             quantCart={data.quantCart}
                             setQuantCart={data.setQuantCart}
+                            quantity={product.quantity}
                         />
                     )
                 }
