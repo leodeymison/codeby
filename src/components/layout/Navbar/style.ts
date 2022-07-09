@@ -13,13 +13,13 @@ export const _Title = styled('div')`
     width: 100%;
 `
 
-export const _IconBox = styled('a')`
+export const _IconBox = styled('div')`
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1em;
     cursor: pointer;
+    padding: 0 1em;
     a {
         display: block;
     }

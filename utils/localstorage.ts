@@ -14,3 +14,9 @@ export function addDBStorage(data:Object, nameDB:string) {
     cartAtual.push(data)
     return setLocalStorage(nameDB, cartAtual)
 }
+
+export function removeDBStorage(nameDB:string, id:string) {
+    var cartAtual = getLocalStorage(nameDB)
+    const cartRemove = cartAtual.filter(cart => cart.id !== id)
+    return setLocalStorage(nameDB, cartRemove)
+}
