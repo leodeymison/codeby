@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { BsCart } from 'react-icons/bs';
 
 import { getLocalStorage, setLocalStorage } from '../utils/localstorage'
-import { GetDataFirebase } from "./index.ds";
  
 export default function Cart () {
     const [carts, setCarts] = useState()
@@ -22,7 +21,16 @@ export default function Cart () {
     }, [quantCart]);
 
     useEffect(() => {
-      GetDataFirebase(setLocalStorage, getLocalStorage, setCarts)
+      fetch(`https://codeby-16da8-default-rtdb.firebaseio.com/product.json`)
+        .then(res => res.json())
+        .then(data => {
+          const newData = data.filter(dt => dt !== null)
+          setLocalStorage('product', newData)
+          setCarts(getLocalStorage('product'))
+        })
+        .catch(error => {
+          console.log(error)
+        })
     }, [])
 
     return (
