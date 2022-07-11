@@ -1,10 +1,8 @@
+// styleds
 import { _Quant, _QuantBox } from './style';
 
-interface QuantatyInterface {
-    value: number,
-    add: any,
-    back: any
-}
+// interfaces
+import { QuantatyInterface } from '../../interfaces/Quantaty';
 
 export default function Quantaty(data:QuantatyInterface){
     const { value, add, back } = data

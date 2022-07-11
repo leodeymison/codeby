@@ -3,16 +3,11 @@ import ProductHome from "../ProductHome/index";
 // styleds
 import { _body } from '../../../styled/global';
 import { _ContainerLocal } from './style'
-// interface
-import { ProductInterface } from '../../../interfaces/product';
 
-interface ProductsCart {
-    products: Array<ProductInterface>,
-    setQuantCart: Function,
-    quantCart: number
-}
+// Interfaces
+import { ProductsCartBody } from '../../../interfaces/ProductsCart';
 
-export default function CartBody(data: ProductsCart) {
+export default function CartBody(data: ProductsCartBody) {
     return (
         <_body>
             <_ContainerLocal>

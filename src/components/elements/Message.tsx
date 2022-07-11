@@ -2,11 +2,9 @@
 import { _Message } from './style';
 
 // interfaces
-interface Message {
-    msg: string
-}
+import { MessageType } from '../../interfaces/Message';
 
-export default function Message(data: Message){
+export default function Message(data: MessageType){
     const { msg } = data
     return (
         <_Message>

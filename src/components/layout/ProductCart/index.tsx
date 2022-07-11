@@ -44,8 +44,9 @@ export default function ProductCart(data:ProductInterface) {
             const cartUptodateNew = [...productAllFilterOne, ...productOne]
             setValueTotal(valueTotal -= productOne[0].sellingPrice)
             setLocalStorage('cart', cartUptodateNew)
-            return setValue(value-1)}
+            return setValue(value-1)
         }
+    }
     return (
         <_Container dplay='flex' pd={1}>
             <_Card>

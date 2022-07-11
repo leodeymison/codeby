@@ -10,6 +10,7 @@ import _Box from '../../src/styled/box';
 import { useEffect, useState } from "react";
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
+// LocalStorage
 import { getLocalStorage } from '../../utils/localstorage'
 
 export default function Cart () {
