@@ -9,6 +9,7 @@ import _Box from '../src/styled/box';
 import { useEffect, useState } from "react";
 import { BsCart } from 'react-icons/bs';
 
+// LocalStorage
 import { getLocalStorage, setLocalStorage } from '../utils/localstorage'
  
 export default function Cart () {

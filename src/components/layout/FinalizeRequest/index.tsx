@@ -6,9 +6,8 @@ import { _Container, _Heading } from '../../../styled/global';
 import ButtonFunc from '../../elements/ButtonFunc';
 import Message from '../../elements/Message';
 
-interface Finalizar {
-    value: number
-}
+// Interfaces
+import { Finalizar } from '../../../interfaces/FinaalizeRequest';
 
 export default function FinalizeRequest(data:Finalizar) {
     const { value } = data

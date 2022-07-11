@@ -1,17 +1,12 @@
 // Components
 import ProductCart from "../ProductCart/index";
+
 // styleds
 import { _body } from '../../../styled/global';
+
 // interface
-import { ProductInterface } from '../../../interfaces/product';
-
-interface ProductsCart {
-    products: Array<ProductInterface>,
-    valueTotal: number,
-    setValueTotal: Function,
-    setCarts: Function
-}
-
+import { ProductsCart } from '../../../interfaces/ProductsCart';
+ 
 export default function CartBody(data: ProductsCart) {
     return (
         <_body>

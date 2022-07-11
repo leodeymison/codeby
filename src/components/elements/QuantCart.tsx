@@ -1,9 +1,8 @@
 // styleds
 import { _QuantCart } from './style';
 
-interface QuantCartInterface {
-    value:number
-}
+// Interfaces
+import { QuantCartInterface } from '../../interfaces/QuantCart';
 
 export default function QuantCart(data:QuantCartInterface){
     const { value } = data
